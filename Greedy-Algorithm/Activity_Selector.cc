@@ -15,7 +15,6 @@ void Recursive_Activity_Selector(int *s, int *f, int k, int n, vector<int>& Resu
         Recursive_Activity_Selector(s, f, m, n);
     }
 }
-
 void Greedy_Activity_Selector(int *s, int *f, vector<int>& Result, int n)
 {
     //n = s.size()
