@@ -1,7 +1,7 @@
 #include <iostream>
 
 // use chaining to deal with the collision
-
+// O(1)
 void Chained_Hash_Insert(T, x)
 {
     insert x at the head of list T[h(x.key)];
