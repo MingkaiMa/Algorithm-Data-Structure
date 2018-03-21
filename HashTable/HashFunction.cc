@@ -5,4 +5,4 @@ h(k) = k % m;
 // multiplication hash function
 h(k) = floor(m * ((k * A) % 1))
 
-// universal hashing: choose hash function randomly 
+// universal hashing: choose hash function randomly
