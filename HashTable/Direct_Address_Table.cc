@@ -1,5 +1,7 @@
 #include <iostream>
 
+
+// O(1)
 int Direct_Address_Search(T, k)
 {
     return T[k];
