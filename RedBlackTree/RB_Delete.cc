@@ -55,8 +55,46 @@ void RB_Delete(BST* T, BST* z)
     {
         RB_Delete_Fixup(T, x);
     }
+}
 
+void RB_Delete_Fixup(T, x)
+{
+    while(x != T && x->color == BLACK)
+    {
+        if(x == x->parent->left)
+        {
+            BST* w = x->parent->right;
+            if(w->color == RED)
+            {
+                w->color = BLACK;
+                x->parent->color = RED;
+                leftRotate(T, x->parent);
+                w = x->parent->right;
+            }
 
+            if(w->left->color == BLACK && w->right->color == BLACK)
+            {
+                w->color = RED;
+                x = x->parent;
+            }
 
+            else if(w->right->color == BLACK)
+            {
+                w->left->color = BLACK;
+                w->color = RED;
+                rightRotate(T, w);
+                w = x->parent->color;
+            }
 
+            w->color = x->parent->color;
+            x->parent->color = BLACK;
+            w->right->color = BLACK;
+            leftRotate(T, x->parent);
+            x = T;
+        }
+        else
+            ; // same as then clause with "right" and "left" exchanged
+
+    }
+    x->color = BLACK;
 }
