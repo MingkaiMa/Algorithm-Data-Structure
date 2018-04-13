@@ -44,7 +44,6 @@ int getUglyNumberUpToN(int N)
         cout << array[i] << ", ";
     cout << endl;
 
-
     int res = array[N - 1];
     return res ;
 
