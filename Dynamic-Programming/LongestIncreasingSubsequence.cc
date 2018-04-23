@@ -100,6 +100,15 @@ int LIS(vector<int>& v)
             tail[length++] = v[i];
         else
             tail[CeilIndex(tail, -1, length - 1, v[i])] = v[i];
+
+
+        cout << "length: " << length << endl;
+
+        cout << "v[i]: " << v[i] << endl;
+        for(int i = 0; i < tail.size(); i++)
+            cout << tail[i] << ", ";
+        cout << endl;
+
     }
 
     return length;
@@ -115,6 +124,6 @@ int main()
 //    cout << DP_LIS(arr, n) << endl;
 
 
-    vector<int> arr = { 10, 22, 9, 33, 21, 50, 41, 60 };
+    vector<int> arr = {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15 };
     cout << LIS(arr) << endl;
 }
