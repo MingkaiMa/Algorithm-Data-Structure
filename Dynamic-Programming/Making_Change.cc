@@ -28,7 +28,7 @@ int minCoins(int coins[], int m, int V)
 
 // Dynamic Programming
 
-int DP_minCoins(int coints[], int m, int V)
+int DP_minCoins(int coins[], int m, int V)
 {
     int* table = new int[V + 1];
 
@@ -49,6 +49,10 @@ int DP_minCoins(int coints[], int m, int V)
             }
         }
     }
+
+    for(int i = 0; i < V + 1; i++)
+        cout << table[i] << ", ";
+    cout << endl;
     return table[V];
 }
 
