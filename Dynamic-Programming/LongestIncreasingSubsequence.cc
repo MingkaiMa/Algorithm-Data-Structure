@@ -48,11 +48,17 @@ int DP_LIS(int arr[], int n)
         }
     }
 
+
+
+
     for(int i = 0; i < n; i++)
     {
+        cout << lis[i] << ", ";
         if(max < lis[i])
             max = lis[i];
     }
+
+    cout << "\n";
 
     return max;
 }
