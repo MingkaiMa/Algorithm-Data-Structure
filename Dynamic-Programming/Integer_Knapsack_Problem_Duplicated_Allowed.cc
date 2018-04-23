@@ -10,7 +10,7 @@ int DP(int value[], int weight[], int n, int C, vector<int>& backtrack)
     for(i = 1; i <= C; i++)
     {
         temp = INT_MIN;
-        
+
         M[i] = M[i - 1];
         pos = i - 1;
         for(j = 0; j < n; j++)
