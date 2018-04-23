@@ -43,10 +43,39 @@ int DP_count(int S[], int m, int n)
     return table[n][m - 1];
 }
 
+
+// DP2  1-D array
+
+int DP_1D(int S[], int m, int n)
+{
+    int* table = new int[n + 1];
+
+    for(int i = 0; i < n + 1; i++)
+        table[i] = 0;
+
+
+    table[0] = 1;
+
+    for(int i = 0; i < m; i++)
+    {
+        for(int j = S[i]; j <= n; j++)
+            table[j] += table[j - S[i]];
+
+        cout << "i: " << i << " S[i]: "<< S[i] << endl;
+        for(int ii = 0; ii < n + 1; ii++)
+        {
+            cout << table[ii] << ", ";
+        }
+        cout << endl;
+    }
+    return table[n];
+}
+
+
 int main()
 {
-
+    cout << "efe\n";
     int arr[] = {1, 2, 3};
     int m = sizeof(arr) / sizeof(arr[0]);
-    cout << count(arr, m, 4) << endl;
+    cout << DP_1D(arr, m, 4) << endl;
 }
