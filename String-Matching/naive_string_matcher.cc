@@ -18,7 +18,7 @@ void naive_string_matcher(string T, string P)
 
 int main()
 {
-    string T = "abcde";
+    string T = "abcdecde";
     string P = "cde";
 
     naive_string_matcher(T, P);
